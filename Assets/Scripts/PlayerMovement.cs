@@ -72,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         anim.SetInteger("state", ((int)movState));
+
+        Debug.Log("Animação atualizada! Novo estado: " + movState.ToString());
     }
 
     private bool IsGrounded()
