@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     {
         MovementState movState;
 
-        if (dirX > 0f)
+        if (dirX > 0)
         {
             movState = MovementState.Running;
             sprite.flipX = false;
@@ -66,14 +66,12 @@ public class PlayerMovement : MonoBehaviour
         {
             movState = MovementState.Falling;
         }
-        else if (rb.velocity.y == 0)
+        else if (rb.velocity.Equals(new Vector2(0.0f, 0.0f)))
         {
             movState = MovementState.Idle;
         }
 
         anim.SetInteger("state", ((int)movState));
-
-        Debug.Log("Animação atualizada! Novo estado: " + movState.ToString());
     }
 
     private bool IsGrounded()
