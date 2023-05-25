@@ -6,14 +6,11 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField] private Transform leftWaypoint;
     [SerializeField] private Transform rightWaypoint;
 
-    private Rigidbody2D rb;
     private float leftBoundary;
     private float rightBoundary;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-
         leftBoundary = leftWaypoint.position.x;
         rightBoundary = rightWaypoint.position.x;
     }
