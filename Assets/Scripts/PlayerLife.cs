@@ -30,4 +30,9 @@ public class PlayerLife : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    private void LoadNextLevel()
+    {
+        SceneManager.LoadScene(FruitLevelData.NextLevelName);
+    }
 }
