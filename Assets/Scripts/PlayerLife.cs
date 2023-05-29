@@ -24,6 +24,7 @@ public class PlayerLife : MonoBehaviour
     private void Die()
     {
         anim.SetTrigger("death");
+        FruitLevelData.FruitsCollected = 0;
     }
 
     private void RestartLevel()
