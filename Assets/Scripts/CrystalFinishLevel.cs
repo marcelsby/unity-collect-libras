@@ -4,7 +4,6 @@ public class CrystalFinishLevel : MonoBehaviour
 {
     private int fruitsToBeCollectedQuantity;
 
-    [SerializeField] private ItemCollector collectorScript;
     [SerializeField] private GameObject unfinishedLevelWarning;
 
 

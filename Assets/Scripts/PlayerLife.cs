@@ -17,14 +17,13 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("Trap"))
         {
             Die();
-            rb.bodyType = RigidbodyType2D.Static;
         }
     }
 
-    private void Die()
+    public void Die()
     {
         anim.SetTrigger("death");
-        FruitLevelData.FruitsCollected = 0;
+        rb.bodyType = RigidbodyType2D.Static;
     }
 
     private void RestartLevel()

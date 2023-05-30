@@ -15,6 +15,7 @@ public class FruitLevelData : MonoBehaviour
     
     void Start()
     {
+        FruitsCollected = 0;
         fruitsToBeCollected = GameObject.FindWithTag("CollectiblesGrouper").transform.childCount;
         NextLevelName = nextLevel.name;
         FruitName = fruitName;
