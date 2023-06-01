@@ -3,21 +3,21 @@ using UnityEditor;
 
 public class FruitLevelData : MonoBehaviour
 {
-    [SerializeField] private SceneAsset nextLevel;
+    [SerializeField] private int nextLevelBuildIndex;
     [SerializeField] private string fruitName;
 
     private static int fruitsToBeCollected;
 
     public static int FruitsToBeCollected { get { return fruitsToBeCollected; } }
     public static int FruitsCollected { get; set; }
-    public static string NextLevelName { get; set; }
+    public static int NextLevelBuildIndex { get; set; }
     public static string FruitName { get; set; }
     
     void Start()
     {
         FruitsCollected = 0;
         fruitsToBeCollected = GameObject.FindWithTag("CollectiblesGrouper").transform.childCount;
-        NextLevelName = nextLevel.name;
+        NextLevelBuildIndex = nextLevelBuildIndex;
         FruitName = fruitName;
     }
 

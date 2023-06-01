@@ -20,9 +20,6 @@ public class LibrasChallengeController : MonoBehaviour
 
     public LibrasLetterCollectionStatus CollectLetterInOrder(char collectedLetter)
     {
-        Debug.Log($"Collected letter: {collectedLetter}");
-        Debug.Log($"Expected letter: {expectedWord[nextLetterIndex]}");
-
         char expectedLetter = expectedWord[nextLetterIndex];
 
         if (collectedLetter != expectedLetter)

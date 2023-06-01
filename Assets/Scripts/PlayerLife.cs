@@ -33,6 +33,6 @@ public class PlayerLife : MonoBehaviour
 
     private void LoadNextLevel()
     {
-        SceneManager.LoadScene(FruitLevelData.NextLevelName);
+        SceneManager.LoadScene(FruitLevelData.NextLevelBuildIndex);
     }
 }
